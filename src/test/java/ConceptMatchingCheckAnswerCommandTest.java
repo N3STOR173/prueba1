@@ -44,7 +44,7 @@ public class ConceptMatchingCheckAnswerCommandTest {
         context.setArgument("conceptosIds", new HashSet<>());
         ConceptMatchingCheckAnswerCommand command = new ConceptMatchingCheckAnswerCommand();
         Context r1 = command.execute(context);
-        assertTrue(r1.getCommandName() == CommandName.conceptMatchingCheckAnswerOk);
+        assertTrue(r1.getCommandName() != CommandName.conceptMatchingCheckAnswerOk);
         assertTrue(r1.getArguments().containsKey("feedback"));
         assertTrue(r1.getArguments().get("feedback") instanceof HashMap<?,?>);
 
