@@ -20,13 +20,13 @@ jobs:
       - uses: actions/checkout@v4
 
       # prueba
-      - name: Run a one-line script
+      - name: Comando de prueba
         run: echo Hello, world!
 
-      #- name: Ejecutar pruebas específicas con Maven
-      #  run: mvn -Dtest=ConceptMatchingCheckAnswerCommandTest,\
-      #                  ConceptMatchingGetDataCommandTest,\
-      #                  ConceptMatchingServiceTest,\
-      #                  ConceptoDTOTest,\
-      #                  ConceptosDefinicionesTOATest,\
-      #                  DefinicionDTOTest test
+      - name: Ejecutar pruebas específicas con Maven
+        run: mvn -Dtest=ConceptMatchingCheckAnswerCommandTest,\
+                        ConceptMatchingGetDataCommandTest,\
+                        ConceptMatchingServiceTest,\
+                        ConceptoDTOTest,\
+                        ConceptosDefinicionesTOATest,\
+                        DefinicionDTOTest test
