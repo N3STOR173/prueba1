@@ -19,11 +19,12 @@ jobs:
 
       - uses: actions/checkout@v4
 
-      - name: Ver en que directorio esta
-        run: ls
-
-      - name: Cambiar al directorio adecuado
-        run: cd TASKMASTER
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
 
       # prueba
       - name: Comando de prueba
