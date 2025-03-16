@@ -31,9 +31,4 @@ jobs:
         run: echo Hello, world!
 
       - name: Ejecutar pruebas específicas con Maven
-        run: mvn -Dtest=ConceptMatchingCheckAnswerCommandTest,\
-                        ConceptMatchingGetDataCommandTest,\
-                        ConceptMatchingServiceTest,\
-                        ConceptoDTOTest,\
-                        ConceptosDefinicionesTOATest,\
-                        DefinicionDTOTest test
+        run: mvn test
